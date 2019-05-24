@@ -44,6 +44,54 @@
   100% {
     transform: rotate(0); } }
 
+@keyframes glitch1 {
+  0% {
+    clip: rect(34px, 9999px, 29px, 0); }
+  10% {
+    clip: rect(14px, 9999px, 56px, 0); }
+  20% {
+    clip: rect(61px, 9999px, 93px, 0); }
+  30% {
+    clip: rect(93px, 9999px, 43px, 0); }
+  40% {
+    clip: rect(8px, 9999px, 47px, 0); }
+  50% {
+    clip: rect(38px, 9999px, 45px, 0); }
+  60% {
+    clip: rect(22px, 9999px, 3px, 0); }
+  70% {
+    clip: rect(41px, 9999px, 48px, 0); }
+  80% {
+    clip: rect(82px, 9999px, 40px, 0); }
+  90% {
+    clip: rect(88px, 9999px, 11px, 0); }
+  100% {
+    clip: rect(65px, 9999px, 7px, 0); } }
+
+@keyframes glitch2 {
+  0% {
+    clip: rect(97px, 9999px, 21px, 0); }
+  10% {
+    clip: rect(99px, 9999px, 26px, 0); }
+  20% {
+    clip: rect(24px, 9999px, 66px, 0); }
+  30% {
+    clip: rect(77px, 9999px, 53px, 0); }
+  40% {
+    clip: rect(6px, 9999px, 22px, 0); }
+  50% {
+    clip: rect(23px, 9999px, 81px, 0); }
+  60% {
+    clip: rect(97px, 9999px, 90px, 0); }
+  70% {
+    clip: rect(17px, 9999px, 62px, 0); }
+  80% {
+    clip: rect(92px, 9999px, 7px, 0); }
+  90% {
+    clip: rect(5px, 9999px, 51px, 0); }
+  100% {
+    clip: rect(54px, 9999px, 48px, 0); } }
+
 *,
 *::after,
 *::before {
@@ -197,7 +245,22 @@ body {
     font-size: 4rem;
     transition: .1s linear all; }
     .navbar__site-title:hover {
-      color: #d9d9d9; }
+      color: #1a1a1a; }
+      .navbar__site-title:hover::before, .navbar__site-title:hover::after {
+        content: attr(data-text);
+        position: absolute;
+        top: .5rem;
+        left: 3rem; }
+      .navbar__site-title:hover::before {
+        left: 2rem;
+        text-shadow: -9px 0 #f2f2f2;
+        background: #1a1a1a;
+        animation: glitch1 1.3s linear alternate-reverse infinite; }
+      .navbar__site-title:hover::after {
+        left: 2rem;
+        text-shadow: 3px 0 #f2f2f2;
+        background: #f2f2f2;
+        animation: glitch2 1s ease-out alternate-reverse infinite; }
   .navbar__items {
     display: flex;
     flex-direction: row;

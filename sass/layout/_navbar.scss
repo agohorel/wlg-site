@@ -22,7 +22,29 @@
 		transition: .1s linear all;
 
 		&:hover {
-			color: $lightgrey;
+			color: $nearblack;
+
+			&::before,
+			&::after {
+				content: attr(data-text);
+				position: absolute;
+				top: .5rem;
+				left: 3rem;
+			}
+
+			&::before {
+				left: 2rem;
+				text-shadow: -9px 0 $offwhite;
+				background: $nearblack;
+				animation: glitch1 1.3s linear alternate-reverse infinite;
+			}
+
+			&::after {
+				left: 2rem;
+				text-shadow: 3px 0 $offwhite;
+				background: $offwhite;
+				animation: glitch2 1s ease-out alternate-reverse infinite;
+			}
 		}
 	}
 
