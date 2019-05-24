@@ -323,7 +323,8 @@ body {
     height: auto;
     padding: 5rem;
     background-color: rgba(242, 242, 242, 0.75);
-    text-align: center; }
+    text-align: center;
+    animation: fadeIn 1.25s ease-out forwards; }
   .p5__text {
     font-size: 2rem;
     color: #1a1a1a; }

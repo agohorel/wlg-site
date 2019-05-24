@@ -29,6 +29,7 @@
 		padding: 5rem;
 		background-color: rgba($offwhite, .75);
 		text-align: center;
+		animation: fadeIn 1.25s ease-out forwards;
 	}
 
 	&__text {
