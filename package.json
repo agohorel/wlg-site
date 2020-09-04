@@ -19,7 +19,7 @@
     "autoprefixer": "^9.4.7",
     "concat": "^1.0.3",
     "marked": "^0.6.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "postcss-cli": "^6.1.1"
   }
 }
